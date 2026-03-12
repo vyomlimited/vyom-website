@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vyom Limited — India to UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :root {
+    --ink:     #1a1a18;
+    --sand:    #f5f0e8;
+    --warm:    #e8dece;
+    --spice:   #7ecac3;
+    --sage:    #5aabab;
+    --gold:    #c9a84c;
+    --mist:    #8a8a7a;
+    --white:   #fdfcf8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    background: var(--white);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ─────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 60px;
+    background: rgba(253,252,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,26,24,0.08);
+    animation: fadeDown 0.8s ease forwards;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--spice); }
+
+  .nav-links {
+    display: flex; gap: 40px; list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── HERO ────────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 60px;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--spice);
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--spice);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--spice);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--mist);
+    max-width: 420px;
+    margin-bottom: 48px;
+  }
+
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--ink);
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    width: fit-content;
+  }
+
+  .hero-cta:hover { background: var(--spice); transform: translateX(4px); }
+
+  .hero-cta-arrow { font-size: 16px; transition: transform 0.3s; }
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+
+  .hero-right {
+    position: relative;
+    background: var(--sand);
+    overflow: hidden;
+    animation: fadeIn 1.2s ease 0.4s both;
+  }
+
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 70% 30%, rgba(184,92,42,0.12) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(74,92,69,0.10) 0%, transparent 50%);
+  }
+
+  .hero-mandala {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px; height: 480px;
+    opacity: 0.07;
+    animation: rotateSlow 60s linear infinite;
+  }
+
+  .hero-card {
+    position: absolute;
+    bottom: 60px; left: -30px;
+    background: var(--white);
+    padding: 28px 32px;
+    box-shadow: 0 20px 60px rgba(26,26,24,0.12);
+    animation: fadeUp 1s ease 0.8s both;
+    min-width: 260px;
+  }
+
+  .hero-card-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-bottom: 10px;
+  }
+
+  .hero-card-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .hero-card-sub {
+    font-size: 12px;
+    color: var(--mist);
+    font-weight: 300;
+  }
+
+  .hero-tag {
+    position: absolute;
+    top: 48px; right: 40px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    background: rgba(74,92,69,0.1);
+    padding: 8px 16px;
+    border: 1px solid rgba(74,92,69,0.2);
+  }
+
+  /* ── DIVIDER ─────────────────────────────────────────────── */
+  .divider {
+    display: flex; align-items: center;
+    padding: 0 60px;
+    gap: 24px;
+    margin: 0;
+  }
+
+  .divider-line { flex: 1; height: 1px; background: var(--warm); }
+  .divider-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--spice); opacity: 0.5;
+  }
+
+  /* ── INTRO STRIP ─────────────────────────────────────────── */
+  .intro-strip {
+    background: var(--ink);
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+    gap: 0;
+  }
+
+  .intro-item {
+    padding: 0 48px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .intro-item:nth-child(1) { animation-delay: 0.1s; padding-left: 0; }
+  .intro-item:nth-child(3) { animation-delay: 0.2s; }
+  .intro-item:nth-child(5) { animation-delay: 0.3s; padding-right: 0; }
+
+  .intro-divider { background: rgba(255,255,255,0.1); }
+
+  .intro-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--spice);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .intro-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 12px;
+  }
+
+  .intro-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ── ABOUT ───────────────────────────────────────────────── */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+  }
+
+  .about-visual {
+    background: var(--sage);
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+  }
+
+  .about-visual-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(184,92,42,0.2) 0%, transparent 50%);
+  }
+
+  .about-visual-text {
+    position: absolute;
+    bottom: 48px; right: 48px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+    text-align: right;
+    user-select: none;
+  }
+
+  .about-quote {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 40px;
+  }
+
+  .about-quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: rgba(255,255,255,0.2);
+    line-height: 0.5;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .about-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    max-width: 320px;
+  }
+
+  .about-content {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--spice);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    display: block; width: 24px; height: 1px;
+    background: var(--spice);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+
+  .section-title em { font-style: italic; color: var(--sage); }
+
+  .section-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--mist);
+    margin-bottom: 20px;
+    max-width: 480px;
+  }
+
+  /* ── WHAT WE BRING ───────────────────────────────────────── */
+  .pillars {
+    padding: 100px 60px;
+    background: var(--sand);
+  }
+
+  .pillars-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 72px;
+    align-items: end;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--warm);
+  }
+
+  .pillar {
+    background: var(--white);
+    padding: 44px 36px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: default;
+  }
+
+  .pillar:hover {
+    background: var(--ink);
+    transform: translateY(-4px);
+  }
+
+  .pillar-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  .pillar:hover .pillar-icon { transform: scale(1.1); }
+
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    transition: color 0.3s;
+  }
+
+  .pillar:hover .pillar-title { color: var(--white); }
+
+  .pillar-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--mist);
+    transition: color 0.3s;
+  }
+
+  .pillar:hover .pillar-text { color: rgba(255,255,255,0.6); }
+
+  /* ── FOCUS AREAS ─────────────────────────────────────────── */
+  .focus {
+    padding: 100px 60px;
+    background: var(--white);
+  }
+
+  .focus-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .focus-card {
+    position: relative;
+    padding: 48px 36px 36px;
+    border: 1px solid var(--warm);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+
+  .focus-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--spice);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+  }
+
+  .focus-card:hover::before { transform: scaleX(1); }
+  .focus-card:hover { border-color: transparent; box-shadow: 0 12px 48px rgba(26,26,24,0.08); }
+
+  .focus-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--warm);
+    position: absolute;
+    top: 16px; right: 24px;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .focus-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .focus-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--mist);
+    margin-bottom: 24px;
+  }
+
+  .focus-tag {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--spice);
+    background: rgba(184,92,42,0.08);
+    padding: 6px 14px;
+    display: inline-block;
+  }
+
+  /* ── PROCESS ─────────────────────────────────────────────── */
+  .process {
+    padding: 100px 60px;
+    background: var(--ink);
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .process-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .process-sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    gap: 0;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 32px; left: 12.5%; right: 12.5%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .step {
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .step-number {
+    width: 64px; height: 64px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--gold);
+    background: var(--ink);
+    position: relative; z-index: 1;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .step:hover .step-number {
+    background: var(--spice);
+    border-color: var(--spice);
+    color: var(--white);
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .step-text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* ── CONTACT ─────────────────────────────────────────────── */
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
+  }
+
+  .contact-left {
+    padding: 80px 60px;
+    background: var(--sand);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-right {
+    padding: 80px 60px;
+    background: var(--spice);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 24px;
+    line-height: 1.15;
+  }
+
+  .contact-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--mist);
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .contact-detail-icon {
+    font-size: 18px; margin-top: 2px;
+    opacity: 0.5;
+  }
+
+  .contact-detail-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--mist);
+  }
+
+  .contact-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--spice);
+    margin-bottom: 4px;
+  }
+
+  .form-field {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
+
+  .form-input, .form-textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .form-input::placeholder, .form-textarea::placeholder {
+    color: rgba(255,255,255,0.3);
+  }
+
+  .form-input:focus, .form-textarea:focus {
+    border-color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.15);
+  }
+
+  .form-textarea { height: 100px; resize: none; }
+
+  .form-btn {
+    width: 100%;
+    background: var(--ink);
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 8px;
+  }
+
+  .form-btn:hover { background: rgba(26,26,24,0.85); }
+
+  /* ── FOOTER ──────────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-logo span { color: var(--spice); }
+
+  .footer-copy {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── ANIMATIONS ──────────────────────────────────────────── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes rotateSlow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo-img" style="display:flex;align-items:center;text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" height="36"><rect fill="transparent" width="520" height="240"/><rect x="185" y="30" width="150" height="7" rx="3.5" fill="#7ecac3"/><polyline points="20,78 55,178 90,78" fill="none" stroke="#444444" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="108" y1="78" x2="148" y2="140" stroke="#444444" stroke-width="8.5" stroke-linecap="round"/><line x1="188" y1="78" x2="148" y2="140" stroke="#444444" stroke-width="8.5" stroke-linecap="round"/><line x1="148" y1="140" x2="148" y2="178" stroke="#444444" stroke-width="8.5" stroke-linecap="round"/><circle cx="260" cy="128" r="50" fill="none" stroke="#444444" stroke-width="8.5"/><polyline points="328,178 328,78 414,158 500,78 500,178" fill="none" stroke="#444444" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#focus">What We Source</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#contact">Enquire</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">India to UK · B2B Import &amp; Distribution</div>
+    <h1 class="hero-title">
+      Sourcing India's<br>
+      <em>finest</em> for<br>
+      British business.
+    </h1>
+    <p class="hero-sub">
+      Vyom brings carefully selected natural, herbal and Ayurvedic products from India's most trusted producers directly to UK and European businesses — with the compliance, relationships and reliability that modern buyers demand.
+    </p>
+    <a href="#contact" class="hero-cta">
+      Start a Conversation <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <svg class="hero-mandala" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" stroke="#1a1a18" stroke-width="0.5"/>
+      <circle cx="100" cy="100" r="70" stroke="#1a1a18" stroke-width="0.5"/>
+      <circle cx="100" cy="100" r="50" stroke="#1a1a18" stroke-width="0.5"/>
+      <circle cx="100" cy="100" r="30" stroke="#1a1a18" stroke-width="0.5"/>
+      <circle cx="100" cy="100" r="10" stroke="#1a1a18" stroke-width="0.5"/>
+      <line x1="100" y1="10" x2="100" y2="190" stroke="#1a1a18" stroke-width="0.5"/>
+      <line x1="10" y1="100" x2="190" y2="100" stroke="#1a1a18" stroke-width="0.5"/>
+      <line x1="27" y1="27" x2="173" y2="173" stroke="#1a1a18" stroke-width="0.5"/>
+      <line x1="173" y1="27" x2="27" y2="173" stroke="#1a1a18" stroke-width="0.5"/>
+      <line x1="100" y1="10" x2="163" y2="137" stroke="#1a1a18" stroke-width="0.3"/>
+      <line x1="100" y1="10" x2="37" y2="137" stroke="#1a1a18" stroke-width="0.3"/>
+      <line x1="163" y1="137" x2="37" y2="137" stroke="#1a1a18" stroke-width="0.3"/>
+      <polygon points="100,20 180,155 20,155" stroke="#1a1a18" stroke-width="0.4" fill="none"/>
+      <polygon points="100,180 20,45 180,45" stroke="#1a1a18" stroke-width="0.4" fill="none"/>
+    </svg>
+
+    <div class="hero-card">
+      <div class="hero-card-label">Current Focus</div>
+      <div class="hero-card-value">Natural</div>
+      <div class="hero-card-sub">Herbal &amp; Ayurvedic Inputs · B2B</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-item">
+    <div class="intro-number">12</div>
+    <div class="intro-label">Years in the UK</div>
+    <div class="intro-text">Deep understanding of how British and European businesses source, buy and operate.</div>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-item">
+    <div class="intro-number">India</div>
+    <div class="intro-label">Origin &amp; Heritage</div>
+    <div class="intro-text">First-hand knowledge of India's producer landscape — its certifications, capabilities and craft traditions.</div>
+  </div>
+  <div class="intro-divider"></div>
+  <div class="intro-item">
+    <div class="intro-number">100%</div>
+    <div class="intro-label">B2B focused</div>
+    <div class="intro-text">We work exclusively with businesses — not consumers. Minimum orders, reliable supply, proper documentation.</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-visual-bg"></div>
+    <div class="about-visual-text">Vyom</div>
+    <div class="about-quote">
+      <span class="about-quote-mark">"</span>
+      <p class="about-quote-text">The bridge between India's finest producers and the businesses that need them.</p>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">Two worlds.<br><em>One business.</em></h2>
+    <p class="section-body">
+      Vyom was founded on a simple observation: the UK and European market for India's finest natural, herbal and Ayurvedic products is significantly underserved — not because the demand isn't there, but because the right bridge hasn't existed.
+    </p>
+    <p class="section-body">
+      Our founder grew up in India and has lived and worked in the UK for over a decade, building careers in both countries. That dual perspective — knowing instinctively how Indian producers operate and what UK buyers actually need — is the foundation of everything we do.
+    </p>
+    <p class="section-body">
+      We are not a marketplace. We are not a broker. We are a committed distribution partner — managing compliance, building direct producer relationships, and standing behind every product we bring to market.
+    </p>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="pillars-header">
+    <div>
+      <div class="section-eyebrow">Why Vyom</div>
+      <h2 class="section-title">What sets us<br><em>apart.</em></h2>
+    </div>
+    <p class="section-body" style="align-self: end;">
+      Anyone can find a supplier on a directory. What we offer is something harder to replicate — genuine relationships, market knowledge, and the accountability that comes with having skin in the game.
+    </p>
+  </div>
+  <div class="pillars-grid">
+    <div class="pillar">
+      <span class="pillar-icon">🌿</span>
+      <div class="pillar-title">Certified Supply</div>
+      <p class="pillar-text">We source from suppliers holding relevant international certifications — organic, REACH, and others as required by your industry. Documentation provided as standard.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🤝</span>
+      <div class="pillar-title">Direct Relationships</div>
+      <p class="pillar-text">We work directly with producers — not agents or intermediaries — giving you better pricing, greater traceability, and a cleaner supply chain story.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">📋</span>
+      <div class="pillar-title">Compliance Ready</div>
+      <p class="pillar-text">UK and EU import compliance, documentation, and regulatory requirements handled end-to-end. You focus on your business; we handle the paperwork.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">📦</span>
+      <div class="pillar-title">UK-Based Operations</div>
+      <p class="pillar-text">As a UK-registered business we handle all import logistics, customs clearance and delivery within Britain and Europe — keeping the process simple for your procurement team.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">🧭</span>
+      <div class="pillar-title">India-UK Expertise</div>
+      <p class="pillar-text">Our founder has lived and worked in both countries. We understand the cultural and commercial nuances that make cross-border trade either flow or frustrate.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">⚖️</span>
+      <div class="pillar-title">FTA Advantage</div>
+      <p class="pillar-text">The 2025 India-UK Free Trade Agreement has eliminated or significantly reduced tariffs on many Indian products. We help you benefit from this shift.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="focus" id="focus">
+  <div class="focus-header">
+    <div class="section-eyebrow" style="justify-content: center;">What We Source</div>
+    <h2 class="section-title" style="text-align: center;">Our <em>focus areas.</em></h2>
+    <p class="section-body" style="margin: 0 auto; text-align: center;">
+      We focus on categories where Indian provenance is a genuine differentiator — not just a cost advantage.
+    </p>
+  </div>
+  <div class="focus-grid">
+    <div class="focus-card">
+      <div class="focus-number">01</div>
+      <h3 class="focus-title">Natural &amp; Herbal Dyes</h3>
+      <p class="focus-text">Plant-based natural dye extracts for sustainable textile and fashion brands. India has some of the world's most advanced natural dye producers — offering a full spectrum of certified, traceable, plant-based colours.</p>
+      <span class="focus-tag">Textile · Fashion · Craft</span>
+    </div>
+    <div class="focus-card">
+      <div class="focus-number">02</div>
+      <h3 class="focus-title">Ayurvedic &amp; Wellness Ingredients</h3>
+      <p class="focus-text">Botanical extracts, herbal powders and Ayurvedic ingredients for supplement brands, wellness companies and independent pharmacies.</p>
+      <span class="focus-tag">Wellness · Supplements · Pharmacy</span>
+    </div>
+    <div class="focus-card">
+      <div class="focus-number">03</div>
+      <h3 class="focus-title">Specialist Natural Inputs</h3>
+      <p class="focus-text">We are actively expanding our portfolio. If you are looking for a specific Indian-origin natural product and struggling to find a reliable, certified UK-based supplier — talk to us.</p>
+      <span class="focus-tag">Bespoke Sourcing Available</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-header">
+    <div class="section-eyebrow" style="justify-content: center; color: rgba(255,255,255,0.4);">How It Works</div>
+    <h2 class="process-title">Simple. Transparent.<br><em style="font-style:italic; color: var(--gold);">Reliable.</em></h2>
+    <p class="process-sub">From first conversation to delivered product — here is what working with Vyom looks like.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <div class="step-title">Enquire</div>
+      <p class="step-text">Tell us what you need — product type, volume, certifications required, and timeline. No commitment required at this stage.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">02</div>
+      <div class="step-title">Sample</div>
+      <p class="step-text">We send product samples with full technical documentation — certifications, safety data sheets, origin details — for your team to assess.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">03</div>
+      <div class="step-title">Agree</div>
+      <p class="step-text">We agree commercial terms — pricing, minimum order quantities, delivery schedule. Everything in writing, everything transparent.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">04</div>
+      <div class="step-title">Deliver</div>
+      <p class="step-text">We manage the import process end-to-end and coordinate delivery to your door. You receive the product, the compliance paperwork, and a point of contact who answers the phone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="contact-title">Let's talk<br>about your<br><em style="font-style: italic; color: var(--sage);">sourcing needs.</em></h2>
+    <p class="contact-body">
+      Whether you have a specific product in mind or are simply exploring whether Indian-origin supply could work for your business — we're happy to have an informal conversation with no obligation.
+    </p>
+    <div class="contact-detail">
+      <span class="contact-detail-icon">📍</span>
+      <div>
+        <div class="contact-detail-label">Based In</div>
+        <div class="contact-detail-text">United Kingdom<br><span style="font-size:12px; color: var(--mist);">Sourcing network across India</span></div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <span class="contact-detail-icon">✉️</span>
+      <div>
+        <div class="contact-detail-label">Email</div>
+        <div class="contact-detail-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc4c3cbc2eddbd4c2c0c1c4c0c4d9c8c983cec2c0">[email&#160;protected]</a></div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <span class="contact-detail-icon">💼</span>
+      <div>
+        <div class="contact-detail-label">Business only</div>
+        <div class="contact-detail-text">We work exclusively with registered businesses and trade buyers.</div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <div style="margin-bottom: 32px;">
+      <div style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px;">Send an Enquiry</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--white); line-height: 1.3;">We respond within<br>one business day.</div>
+    </div>
+    <div class="form-field">
+      <label class="form-label">Your Name</label>
+      <input class="form-input" type="text" placeholder="Full name">
+    </div>
+    <div class="form-field">
+      <label class="form-label">Company</label>
+      <input class="form-input" type="text" placeholder="Company name">
+    </div>
+    <div class="form-field">
+      <label class="form-label">Email</label>
+      <input class="form-input" type="email" placeholder="you@company.com">
+    </div>
+    <div class="form-field">
+      <label class="form-label">What are you looking for?</label>
+      <textarea class="form-textarea" placeholder="Tell us about your product needs, volumes, and any certification requirements..."></textarea>
+    </div>
+    <button class="form-btn">Send Enquiry →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" height="32"><rect fill="transparent" width="520" height="240"/><rect x="185" y="30" width="150" height="7" rx="3.5" fill="#7ecac3"/><polyline points="20,78 55,178 90,78" fill="none" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="108" y1="78" x2="148" y2="140" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round"/><line x1="188" y1="78" x2="148" y2="140" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round"/><line x1="148" y1="140" x2="148" y2="178" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round"/><circle cx="260" cy="128" r="50" fill="none" stroke="#ffffff" stroke-width="8.5"/><polyline points="328,178 328,78 414,158 500,78 500,178" fill="none" stroke="#ffffff" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="footer-copy">© 2026 Vyom Limited. Registered in England &amp; Wales.</div>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a h
+<script>
+  function reportHeight() {
+    var height = document.body.scrollHeight;
+    window.parent.postMessage({ height: height }, "*");
+  }
+  window.addEventListener("load", reportHeight);
+  window.addEventListener("resize", reportHeight);
+  setTimeout(reportHeight, 500);
+  setTimeout(reportHeight, 1500);
+</script>
+</body>
+</html>
